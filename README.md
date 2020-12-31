@@ -18,3 +18,5 @@ if dependencies missing it will ask after that using pip install command install
 after successfully server run  excel file is there in your root folder name as fileupload.xlsx
 
 upload fileupload.xlsx and generated newfile newexcel.xlsx in your root folder with address,lat and lang fileds
+
+NOTE : in xalapp view file apikey is "YOURAPIKEY" other wise it will show error
