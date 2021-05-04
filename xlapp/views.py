@@ -38,13 +38,13 @@ def index(request):
             excel_data.append(row_data)
         workbook = xlsxwriter.Workbook('newexcel.xlsx')
         worksheet = workbook.add_worksheet("My sheet")
-        scores = excel_data
+        addressdata = excel_data
         row = 0
         col = 0
-        for name, score,score1 in (scores):
-            worksheet.write(row, col, name)
-            worksheet.write(row, col + 1, score)
-            worksheet.write(row, col + 2, score1)
+        for add, lat,lang in (addressdata):
+            worksheet.write(row, col, add)
+            worksheet.write(row, col + 1, lat)
+            worksheet.write(row, col + 2, lang)
             row += 1
         workbook.close()
         return render(request, 'xlapp/index.html', {})
